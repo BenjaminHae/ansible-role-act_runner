@@ -5,3 +5,5 @@ act_runner_version: "0.2.6"
 act_runner_download_checksum: sha256:234c2bdb871e7b0bfb84697f353395bfc7819faf9f0c0443845868b64a041057
 act_runner_download_url: "https://dl.gitea.com/act_runner/{{ act_runner_version }}/act_runner-{{ act_runner_version }}-linux-amd64"
 act_runner_identifier: act_runner
+act_runner_cache_ip: ""
+act_runner_cache_port: "35353"
