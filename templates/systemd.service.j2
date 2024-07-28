@@ -7,12 +7,12 @@ After=docker.service
 
 [Service]
 WorkingDirectory={{ act_runner_dir }}
-ExecStart={{ act_runner_dir }}/act_runner-current daemon
+ExecStart={{ act_runner_dir }}/act_runner-current daemon{{ act_runner_config_needed | ternary(' --config '+act_runner_dir+'/config.yaml','')}}
 ExecReload=/bin/kill -HUP $MAINPID
 User={{ act_runner_user }}
 Group={{ act_runner_user }}
 TimeoutSec=0
-RestartSec=2
+RestartSec=30
 Restart=always
 StartLimitBurst=3
 StartLimitInterval=60s
