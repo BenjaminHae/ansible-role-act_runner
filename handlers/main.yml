@@ -4,3 +4,4 @@
     name: "{{ act_runner_identifier }}"
     daemon_reload: true
     state: restarted
+  become: true
